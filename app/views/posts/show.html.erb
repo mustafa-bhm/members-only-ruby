@@ -1,10 +1,38 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+
 
 <div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
+|<%= link_to "Edit this post", edit_post_path(@post) %>
+
   <%= link_to "Back to posts", posts_path %>
 
   <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
+
+
+
+
+  <div class="post-card">
+        <img class="profil-img" src="https://i.imgur.com/Kj5D6T9.png" alt="avatar"  width="80" />
+        <div class="post-card-right">
+          <h4><%=@post.title%></h4>
+          <p class="post"><%=@post.body%></p>
+          <div class="author-date">
+            <h4>By: <%=@post.author %></h4>
+            <p><%= @post.created_at.strftime("%d, %B, %Y") %></p>
+          </div>
+
+          <div class="delete-update-btns">
+
+              <%= button_to @post, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn" do %>
+              <i class="fa-solid fa-trash button-cus"></i>
+              <% end %>
+
+               <%= link_to edit_post_path(@post), class:"btn" do %>
+              <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+
+          </div>
+        </div>
+      </div>
