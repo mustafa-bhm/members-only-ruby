@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+
 
 
 
@@ -19,7 +19,7 @@
           <h4><%=@post.title%></h4>
           <p class="post"><%=@post.body%></p>
           <div class="author-date">
-            <h4>By: <%=@post.author %></h4>
+            <h5>By: <%=@post.author %></h5>
             <p><%= @post.created_at.strftime("%d, %B, %Y") %></p>
           </div>
 
@@ -36,3 +36,5 @@
           </div>
         </div>
       </div>
+
+      <%= link_to "New post", new_post_path %>

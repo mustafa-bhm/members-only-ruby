@@ -18,13 +18,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  /* color: white; */
 }
 body {
   position: relative;
   min-height: 95vh;
-  background: rgb(155, 4, 107);
-  background: linear-gradient(97deg, rgb(140, 4, 59) 8%, rgb(89, 11, 44) 74%);
+  background: rgb(154, 109, 139);
+  background: linear-gradient(97deg, rgb(207, 113, 150) rgb(104, 62, 80)) 74%);
 }
 .container-cus {
   width: 80vw;
@@ -54,7 +54,7 @@ body {
   color: #fff;
   border-radius: 7px;
 }
-.btn {
+.btnn {
   text-decoration: none;
   padding: 0;
 }
@@ -133,27 +133,27 @@ body {
 }
 /* Login & Registration forms  */
 
-.form {
+/* .form {
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
-.form-login {
+} */
+/* .form-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
-input {
+} */
+/* input {
   padding: 0.5rem 0.3rem;
   border-radius: 8px;
   border-style: none;
   width: 100%;
-}
+} */
 .btn-login {
   background-color: #ea4c89;
   padding: 0.7rem 1rem;
