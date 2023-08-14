@@ -23,7 +23,7 @@
 
   <div class="mb-3" style="width:390px">
 
-    <%= form.text_field :author ,  class:"form-control", placeholder:"author" %>
+    <%= form.text_field :author ,  class:"form-control",  value: current_user.username ,type: :hidden %>
   </div>
 
   <div class="mb-3" style="width:390px">
@@ -32,9 +32,9 @@
   </div>
       <div class="mb-3">
 
-    <%= form.number_field :user_id , id: :friend_user_id ,  class:"form-control" , value: current_user.id %>
+    <%= form.number_field :user_id , id: :friend_user_id ,  class:"form-control" , value: current_user.id, type: :hidden %>
   </div>
-<div> <%= current_user.inspect%> </div>
+
   <div>
     <%= form.submit class:"btn btn-success" %>
   </div>
