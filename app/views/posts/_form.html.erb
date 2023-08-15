@@ -13,12 +13,12 @@
 
   <div class="mb-3" style="width:390px">
 
-    <%= form.text_field :title ,  class:"form-control", placeholder:"title" %>
+    <%= form.text_field :title ,  class:"form-control", placeholder:"Title (Max 20 Chars )", maxlength: 20 %>
   </div>
 
-  <div class="mb-3" style="width:390px">
+  <div class="mb-3" style="width:390px;">
 
-    <%= form.text_area :body ,  class:"form-control", placeholder:"Your Post" %>
+    <%= form.text_area :body ,   class:"form-control", placeholder:"Your Post (Max Chars 140 )",  maxlength: 140, rows:5 %>
   </div>
 
   <div class="mb-3" style="width:390px">
