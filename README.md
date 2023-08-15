@@ -1,24 +1,39 @@
-# README
+# MEMBERS ONLY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An exclusive clubhouse where members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is and when it was posted, but outside they can only see the story and wonder who wrote it.
 
-Things you may want to cover:
+Live 👉 (please allow 30s to 40s for the server to load)
 
-* Ruby version
+### Functionality :
 
-* System dependencies
+Members can :
 
-* Configuration
+- View all posts,
+- Create , edit and delete their own post,
+- See the Author and the Date of others posts
 
-* Database creation
+Non members can:
 
-* Database initialization
+- Only see anonymos posts
 
-* How to run the test suite
+### Tech stack
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby version 3.1.2
+- Rails version 7.0.6
+- SQLite for the database
 
-* Deployment instructions
+### Homepage non-members
 
-* ...
+![home-page](app/assets/images/non-logged-in-user.png)
+
+### Homepage for members
+
+![home-page](app/assets/images/logged-in-user.png)
+
+### Members dashboard
+
+![home-page](app/assets/images/members-dashboard.png)
+
+### Registration page
+
+![home-page](app/assets/images/sign-up-page.png)
