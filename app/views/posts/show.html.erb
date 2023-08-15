@@ -2,39 +2,34 @@
 
 
 
-<div>
-|<%= link_to "Edit this post", edit_post_path(@post) %>
-
-  <%= link_to "Back to posts", posts_path %>
-
-  <%= button_to "Destroy this post", @post, method: :delete %>
-</div>
 
 
+  <% if @post.user == current_user %>
+   <div class="card  border-dark" style="width: 40rem; margin:0 auto; margin-bottom:10px; margin-top:10px; background-color: #FDD692; ">
+       <div class="" style="margin: auto;" >
+          <img class="profil-img mt-3" src= "<%= @post.avatar %>"  alt="avatar"  width="80" />
+            <h6 class="card-subtitle mt-2 text-body-secondary" align="center" >By: <%=@post.author %></h6>
+       </div>
+        <div class="card-body " style="margin-left:0px">
+        <h5 class="card-title" align="center"><%= @post.title %></h5>
 
+        <p class="card-text"><%=@post.body%></p>
 
-  <div class="post-card">
-        <img class="profil-img" src="https://i.imgur.com/Kj5D6T9.png" alt="avatar"  width="80" />
-        <div class="post-card-right">
-          <h4><%=@post.title%></h4>
-          <p class="post"><%=@post.body%></p>
-          <div class="author-date">
-            <h5>By: <%=@post.author %></h5>
-            <p><%= @post.created_at.strftime("%d, %B, %Y") %></p>
+          <div style="display:flex; gap:5px;">
+           <%= link_to "Edit", edit_post_path(@post), class: "btn btn-dark" %>
+           <%= button_to "Delete", @post, method: :delete , data: { confirm: 'Are you sure?' },  class:'btn btn-warning' %>
           </div>
 
-          <div class="delete-update-btns">
 
-              <%= button_to @post, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn" do %>
-              <i class="fa-solid fa-trash button-cus"></i>
-              <% end %>
-
-               <%= link_to edit_post_path(@post), class:"btn" do %>
-              <i class="fa-solid fa-pen-to-square"></i>
-              <% end %>
-
-          </div>
-        </div>
       </div>
+        <div class="card-footer" style="background-color:#E8EDDF">
 
-      <%= link_to "New post", new_post_path %>
+         <div  align="right">Date:  <%= @post.created_at.strftime("%d, %B, %Y") %></div>
+      </div>
+   </div>
+
+     <%= link_to "New post", new_post_path, class: "btn btn-dark" %>
+     <%else%>
+
+     <h2> Hey, what are looking for, you're not supposed to be here ! </h2>
+   <%end %>

@@ -28,14 +28,16 @@
 
   <div class="mb-3" style="width:390px">
 
-    <%= form.text_field :avatar ,  class:"form-control", placeholder:"avatar link" %>
+    <%= form.text_field :avatar ,  class:"form-control", placeholder:"avatar link", value: current_user.avatar, type: :hidden %>
   </div>
       <div class="mb-3">
 
     <%= form.number_field :user_id , id: :friend_user_id ,  class:"form-control" , value: current_user.id, type: :hidden %>
-  </div>
+     </div>
+
+
 
   <div>
-    <%= form.submit class:"btn btn-success" %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>

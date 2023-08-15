@@ -1,6 +1,9 @@
-<h2 class="mb-3">Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="card">
+  <div class="card-header" style="background-color:#E8EDDF" >
+    <h2 style="font-weight:bold;" class="mb-3">Log in</h2>
+  </div>
+  <div class="card-body bg-card" >
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field mb-3" style="width:290px">
 
     <%= f.email_field :email, autofocus: true, autocomplete: "email" , class:"form-control", placeholder:"Email" %>
@@ -25,3 +28,5 @@
 <br/>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
