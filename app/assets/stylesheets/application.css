@@ -111,17 +111,17 @@ input#avatar5[type="radio"] + label {
 
 /* check effect whne selecting an avatar */
 input#avatar1[type="radio"]:checked + label {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 input#avatar2[type="radio"]:checked + label {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 input#avatar3[type="radio"]:checked + label {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 input#avatar4[type="radio"]:checked + label {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 input#avatar5[type="radio"]:checked + label {
-  opacity: 0.7;
+  opacity: 0.5;
 }
